@@ -1,0 +1,10 @@
+export { default as Header } from "./Header.jsx";
+export { default as Hero } from "./Hero.jsx";
+export { default as AboutUs } from "./AboutUs.jsx";
+export { default as Features } from "./Features.jsx";
+export { default as PricingPlan } from "./PricingPlan.js";
+export { default as Community } from "./Community.jsx";
+export { default as Banner } from "./Banner.jsx";
+export { default as OurRoadmap } from "./OurRoadmap.js";
+export { default as FAQs } from "./FAQs.jsx";
+export { default as Footer } from "./Footer.jsx";

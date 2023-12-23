@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+input {
+  color: white;
+}
+
+/* width and height for scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  background: #101027;
+}
+
+/* Contact Us */
+.custom-checkbox {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.custom-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.custom-checkbox input[type="checkbox"]:checked+.checkmark::before {
+  content: "✔";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  background: linear-gradient(to bottom right, #007bff, #00ffcc);
+  border: none;
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.custom-checkbox input[type="checkbox"]:not(:checked)+.checkmark {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.bg-contact {
+  background: url("../../public/breadcrumb-shape-1.png"),
+    linear-gradient(#0e0f28, #0e0f28);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contact-input {
+  width: 100%;
+  height: 54px;
+  line-height: 54px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+  padding: 0 28px;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+}
+
+.contact-textarea {
+  width: 100%;
+  line-height: 54px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  -ms-border-radius: 30px;
+  border-radius: 30px;
+  padding: 0 28px;
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+}
+
+.primBtn {
+  background-image: linear-gradient(to right, #ff40ec, #2b47ff);
+}
+
+/* Swiper css */
+.swiper {
+  width: 800px;
+  height: 360px;
+}
+
+@media (max-width: 900px) {
+  .swiper {
+    width: 400px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 450px) {
+  .swiper {
+    width: 350px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 376px) {
+  .swiper {
+    width: 290px;
+    height: 130px;
+  }
+}
+
+.swiper-slide {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+}
+
+/* custom swal bg */
+.check {
+  color: #007bff !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  color: #ff5e6661;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+  margin: 5px;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  transition: 0.5s ease-in-out;
+}
+
+.list-item-hover:hover {
+  background-color: #640f6c;
+  transition: background-color 0.3s ease;
+}
+
+.rce-citem {
+  background-color: rgb(34, 36, 59) !important;
+  color: white !important;
+}
+
+.react-select-container {
+  width: 250px;
+}
+
+.react-select__control {
+  background-color: rgb(34, 36, 59);
+  border: none;
+}
+
+.react-select__menu {
+  width: 250px;
+}
+
+.css-13cymwt-control,
+.css-t3ipsp-control {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+
+}
+
+.course .css-t3ipsp-control, .course .css-13cymwt-control {
+  border-radius: 25px !important;
+  height: 55px;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.css-1jqq78o-placeholder {
+  color: white !important;
+  opacity: 0.6 !important;
+}
+
+.css-13cymwt-control:hover {
+  background-color: rgb(38, 41, 75) !important;
+}
+
+.css-1dimb5e-singleValue {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.css-1nmdiq5-menu {
+  background-color: rgb(34, 36, 59) !important;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 0.3rem rgba(0, 255, 255, 0.3));
+}
+
+.card-reload {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-reload::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 100%);
+  animation: reloadAnimation 1.4s infinite linear;
+}
+
+@keyframes reloadAnimation {
+  0% {
+    left: -100%;
+  }
+
+  25% {
+    left: 50%;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  75% {
+    left: 100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .Hero-bg {
+    background-image: none !important;
+  }
+}
+
+/* rce-citem */
+.rce-citem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.rce-avatar-container {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px;
+  height: 40px;
+  background-color: #3e40b87d;
+  border: 1px solid #5255ed;
+  border-radius: 50%;
+}
+
+.rce-avatar {
+  height: 25px;
+}
+
+.rce-citem-body--top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.rce-citem-body--top-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.rce-citem-body--top-time {
+  font-weight: 100;
+  font-size: 10px;
+}
+
+.rce-citem-body--top-time::before {
+  content: "(";
+}
+
+.rce-citem-body--top-time::after {
+  content: ")";
+}
+
+.rce-citem-body--bottom {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.ck.ck-toolbar {
+  background-color: transparent !important;
+}
+
+.ck-editor {
+  overflow: hidden !important;
+  border-radius: 10px !important;
+  border: 1px solid rgb(0, 60, 255);
+  border-radius: 10px !important;
+  box-shadow: 0 0 3px rgb(0, 102, 255);
+}
+
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused), .ck-reset_all :not(.ck-reset_all-excluded *), .ck.ck-reset, .ck.ck-reset_all {
+  border: none !important;
+}
+
+.ck.ck-toolbar {
+  z-index: 10;
+  border-bottom: 1px solid rgb(0, 60, 255) !important;
+}
+
+.ck-reset_all :not(.ck-reset_all-excluded *), .ck.ck-reset_all {
+  color: white !important;
+}
+
+.ck-content {
+  width: 100%;
+  min-height: 350px;
+  max-height: 500px !important;
+  padding: 10px 50px;
+}
+
+.ck.ck-button:not(.ck-disabled):hover, a.ck.ck-button:not(.ck-disabled):hover, .ck.ck-button.ck-on, a.ck.ck-button.ck-on {
+  background: #22243b !important;
+}
+
+.ck.ck-button {
+  margin: 5px !important;
+}
+
+.ck-content {
+  padding-left: 30px !important;
+}
+
+.ck-content p,
+.ck-content h1,
+.ck-content h2,
+.ck-content h3 {
+  margin-left: -20px;
+}
+
+.ck-content h1 {
+  font-size: 28px;
+}
+
+.ck.ck-editor__main>.ck-editor__editable, .ck.ck-editor__top>.ck-reset_all {
+  background-color: #101027 !important;
+  color: white !important;
+}
